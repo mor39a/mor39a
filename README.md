@@ -7,7 +7,7 @@ public class Mora {
   public string pronouns = "he/him";
   public string[] pasions = {"Programming", "Climbing", "Volleyball", "Equitation", "Photograph"};
   public string[] code = {"C#", "C++", "VBA"};
-  public string[] tools = {"Visual Studio", "Aruduino", "Git", "GitHub", "Unity", "Gimp", "Blender", "Autocad"};
+  public string[] tools = {"Visual Studio", "Arduino", "Git", "GitHub", "Unity", "Gimp", "Blender", "Autocad"};
 }
 ```
 
