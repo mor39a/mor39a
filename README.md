@@ -13,8 +13,9 @@ public class Mora {
   public string training = "Autodidact";
   public string[] learning = {"Java", "Visual Studio Code"};
   public string[] workingOn = {
-    "Invoice management system for a laundry",
-    "Robot avoids obstacles on Arduino"
+    "Invoice management system for a laundry (C# - WPF)",
+    "Robot avoids obstacles on Arduino (C++ - Arduino)",
+    "Portfolio (C# - Blazor)"
   };
 }
 ```
