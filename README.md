@@ -1,6 +1,6 @@
 ## Hi there 👋
 ### About me ✍️
-```cs
+```csharp
 public class Mora {
   public string name = "Santiago Mora";
   public int age = 18;
@@ -12,6 +12,7 @@ public class Mora {
   public string[] languages = {"Spanish (Native)", "English (A2)"};
   public string training = "Autodidact";
   public string[] learning = {"Java", "Visual Studio Code"};
+  public string[] nextToLearn = {"Go", "Python"};
   public string[] workingOn = {
     "Invoice management system for a laundry (C# - WPF)",
     "Robot avoids obstacles on Arduino (C++ - Arduino)",
