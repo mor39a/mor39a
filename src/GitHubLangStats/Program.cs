@@ -1,7 +1,8 @@
-﻿using Octokit;
+﻿using System.Security.Cryptography;
+using Octokit;
 using SkiaSharp;
 
-#region Declarations
+#region Variable Declarations
 
 string? token = Environment.GetEnvironmentVariable("GH_TOKEN");
 GitHubClient client;
@@ -43,6 +44,7 @@ Dictionary<string, long> languageTotals = new();
 
 foreach (var repo in allRepos)
 {
+    if (repo.Fork) continue;
     Console.WriteLine("Watching \"" + (repo.Private ? new string('*', rnd.Next(8, 18)) : repo.Name) + "\" repo");
     var languages = await client.Repository.GetAllLanguages(repo.Id);
     foreach (var lang in languages)
