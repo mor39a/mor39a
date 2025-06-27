@@ -21,6 +21,9 @@ public class Mora {
 }
 ```
 
+### Stats 📊
+[![](./Images/languages.png)](https://github.com/mor39a)
+
 ### Contact me 📱 <br>
 [![Email](https://img.shields.io/badge/Email-gray?logo=maildotru&logoColor=ff0000)](mailto:s.mor.a0396@gmail.com?Subject=Hi%20Mora) 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/mora39)

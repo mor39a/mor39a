@@ -415,3 +415,8 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# ------------------------------------
+
+# Irrelevant to this repo
+mor39a.sln

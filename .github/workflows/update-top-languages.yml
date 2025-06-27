@@ -1,0 +1,62 @@
+name: Update top languages
+
+on:
+    schedule:
+        - cron: '0 6 * * 1'
+    workflow_dispatch:
+
+jobs:
+    update-lang-stats:
+        runs-on: ubuntu-latest
+
+        permissions:
+            contents: write
+
+        steps:
+            - name: Checkout repo 
+              uses: actions/checkout@v4
+              with:
+                ref: ${{ github.head_ref }}
+                token: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Setup dotnet
+              uses: actions/setup-dotnet@v4
+              with:
+                dotnet-version: '8.0.x'
+
+            - name: Build script
+              run: |
+                cd src/GitHubLangStats
+                dotnet build
+
+            - name: Run script
+              env:
+                GH_TOKEN: ${{ secrets.GH_TOKEN }}
+              run: |
+                cd src/GitHubLangStats
+                dotnet run
+
+            - name: Configure Git
+              run: |
+                git config user.name "github-actions[bot]"
+                git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+            - name: Check changes
+              id: check_changes
+              run: |
+                git add Images/
+                if git diff --cached --quiet; then
+                  echo "There are no changes to commit."
+                  echo "changed=false" >> $GITHUB_OUTPUT
+                else
+                  echo "There are changes to commit."
+                  echo "changed=true" >> $GITHUB_OUTPUT
+                fi
+
+            - name: Commit and Push changes
+              if: steps.check_changes.outputs.changed == 'true'
+              env:
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: |                
+                git commit -m "Languages stats updated"
+                git push
