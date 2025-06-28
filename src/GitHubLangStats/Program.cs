@@ -75,7 +75,7 @@ if (!Directory.Exists(path)) Directory.CreateDirectory(path);
 
 #region Create Graph
 
-int width = 1000, margin = 25, marginLeft = labels.Max(x => x.Length) * 10, barHeight = 30, barSpacing = 20, textSize = 16, titleSize = 20;
+int width = 1000, margin = 25, marginLeft = labels.Max(x => x.Length) * 10, barHeight = 30, barSpacing = 20, textSize = 16, titleSize = 20, footerSize = 11;
 int height = (margin * 2) + (barHeight * values.Length) + (barSpacing * values.Length) + titleSize;
 
 using SKBitmap bitmap = new SKBitmap(width, height);
@@ -92,6 +92,7 @@ using SKPaint textPaint = new SKPaint {Color = SKColors.DarkGray, IsAntialias = 
 using SKFont textFont = new SKFont { Size = textSize };
 using SKPaint titlePaint = new SKPaint {Color = SKColors.White, IsAntialias = true };
 using SKFont titleFont = new SKFont { Size = titleSize, Embolden = true };
+using SKFont footerFont = new SKFont { Size = footerSize, Typeface = SKTypeface.FromFamilyName("Arial", SKFontStyle.Italic) };
 
 canvas.DrawText("Top Languages", width / 2, margin + titleSize, SKTextAlign.Center, titleFont, titlePaint);
 
@@ -113,6 +114,7 @@ for (int i = 0; i < values.Length; i++)
     // Draw value (to right of bar)
     canvas.DrawText(Math.Round(values[i] * 100 / values.Sum(), 2).ToString() + "%", x + barWidth + 5, y + barHeight * 0.7f, SKTextAlign.Left, textFont, textPaint);
 }
+canvas.DrawText($"Updated on {DateTime.Now.ToString("dd/MM/yyyy")}", width - 10, height - 10, SKTextAlign.Right, footerFont, textPaint);
 canvas.DrawRoundRect(1, 1, width - 2, height - 2, 20, 20, borderPaint);
 
 using var image = SKImage.FromBitmap(bitmap);
