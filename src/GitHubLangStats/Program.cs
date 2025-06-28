@@ -1,14 +1,15 @@
-﻿using System.Security.Cryptography;
-using Octokit;
+﻿using Octokit;
 using SkiaSharp;
 
 #region Variable Declarations
 
 string? token = Environment.GetEnvironmentVariable("GH_TOKEN");
+string path = "../../Images";
+
 GitHubClient client;
 User user;
+
 Random rnd = new Random();
-string path = "../../Images";
 
 #endregion
 
@@ -68,8 +69,7 @@ float[] values = sorted.Select(x => (float)x.Value).ToArray();
 
 #region Check Dir
 
-if (!Directory.Exists(path))
-    Directory.CreateDirectory(path);
+if (!Directory.Exists(path)) Directory.CreateDirectory(path);
 
 #endregion
 
