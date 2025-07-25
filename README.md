@@ -28,4 +28,14 @@ public class Mora {
 <br><sup>[s.mor.a0396@gmail.com](mailto:s.mor.a0396@gmail.com?Subject=Hi%20Mora)</sup>
 
 ## Stats 📊
-![](./Images/languages.png)
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./resources/snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./resources/snake.svg" />
+    <img alt="Snake" src="./resources/snake.svg" />
+  </picture>
+</div>
+
+<br>
+
+![](./resources/languages.png)

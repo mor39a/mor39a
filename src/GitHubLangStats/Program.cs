@@ -4,7 +4,7 @@ using SkiaSharp;
 #region Variable Declarations
 
 string? token = Environment.GetEnvironmentVariable("GH_TOKEN");
-string path = "../../Images";
+string path = "../../resources";
 
 GitHubClient client;
 User user;

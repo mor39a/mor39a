@@ -1,12 +1,12 @@
-name: Update top languages
+name: Make snake
 
 on:
     schedule:
-        - cron: '0 6 * * 1'
+        - cron: '0 0 * * *'
     workflow_dispatch:
 
 jobs:
-    update-lang-stats:
+    make-snake:
         runs-on: ubuntu-latest
 
         permissions:
@@ -19,22 +19,13 @@ jobs:
                 ref: ${{ github.head_ref }}
                 token: ${{ secrets.GITHUB_TOKEN }}
 
-            - name: Setup dotnet
-              uses: actions/setup-dotnet@v4
+            - name: Make Snake
+              uses: Platane/snk/svg-only@v3
               with:
-                dotnet-version: '8.0.x'
-
-            - name: Build script
-              run: |
-                cd src/GitHubLangStats
-                dotnet build
-
-            - name: Run script
-              env:
-                GH_TOKEN: ${{ secrets.GH_TOKEN }}
-              run: |
-                cd src/GitHubLangStats
-                dotnet run
+                github_user_name: ${{ github.repository_owner }}
+                outputs: |
+                    resources/snake.svg
+                    resources/snake-dark.svg?palette=github-dark
 
             - name: Configure Git
               run: |
@@ -58,5 +49,5 @@ jobs:
               env:
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               run: |                
-                git commit -m "Languages stats updated"
+                git commit -m "Snake updated"
                 git push
