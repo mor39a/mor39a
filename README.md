@@ -34,8 +34,15 @@ public class Mora {
     <source media="(prefers-color-scheme: light)" srcset="./resources/snake.svg" />
     <img alt="Snake" src="./resources/snake.svg" />
   </picture>
-</div>
 
-<br>
 
-![](./resources/languages.png)
+  <br>
+
+  ![](./resources/languages.png)
+
+  ### 🐒 Monkeytype Personal Best
+
+  <!--Monkeytype-Start-->
+  <!--Monkeytype-End-->
+
+  </div>
