@@ -43,6 +43,9 @@ public class Mora {
   ### 🐒 Monkeytype Personal Best
 
   <!--Monkeytype-Start-->
+  | Mode        | WPM   | Accuracy | Raw WPM | Date        |
+  |-------------|-------|----------|---------|-------------|
+  | 30s English | 61.18 | 98.71%   | 61.18   | 29 Jul 2025 |
   <!--Monkeytype-End-->
 
   </div>
