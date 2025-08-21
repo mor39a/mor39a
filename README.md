@@ -35,7 +35,6 @@ public class Mora {
     <img alt="Snake" src="./resources/snake.svg" />
   </picture>
 
-
   <br>
 
   ![](./resources/languages.png)
@@ -48,4 +47,4 @@ public class Mora {
   | 30s English | 70.79 | 100%     | 70.79   | 16 Aug 2025 |
   <!--Monkeytype-End-->
 
-  </div>
+</div>
