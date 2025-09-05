@@ -179,7 +179,7 @@ namespace MonkeyTypeAPI
         static string? ToTitleCase(string? input)
         {
             if (string.IsNullOrWhiteSpace(input)) return input;
-            else return char.ToUpper(input[0]) + input[1..];
+            else return char.ToUpper(input[0]) + input[1..].ToLower();
         }
     }
 }
