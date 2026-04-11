@@ -10,13 +10,13 @@ public class Mora {
   public string[] code = {"C#", "C++", "VBA"};
   public string[] tools = {"Visual Studio", "Arduino", "Git", "GitHub", "Unity", "Gimp", "Blender", "Autocad"};
   public string[] languages = {"Spanish (Native)", "English (A2)"};
-  public string training = "Autodidact";
-  public string[] learning = {"Java", "Visual Studio Code"};
-  public string[] nextToLearn = {"Go", "Python"};
+  public string training = "Self-taught developer | Cybersecurity Engineering student";
+  public string[] learning = {"Python", "Visual Studio Code"};
+  public string[] nextToLearn = {"Java", "Go"};
   public string[] workingOn = {
-    "Invoice management system for a laundry (C# - WPF)",
-    "Robot avoids obstacles on Arduino (C++ - Arduino)",
-    "Portfolio (C# - Blazor)"
+    "[Active] Automating reports for my work (C# - WPF)",
+    "[On hold] Robot avoids obstacles on Arduino (C++ - Arduino)",
+    "[On hold] Portfolio (C# - Blazor)"
   };
 }
 ```
