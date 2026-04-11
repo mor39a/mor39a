@@ -15,6 +15,7 @@ public class Mora {
   public string[] nextToLearn = {"Java", "Go"};
   public string[] workingOn = {
     "[Active] Automating reports for my work (C# - WPF)",
+    "[Collaborator] RunCat365 (C# - Win32)",
     "[On hold] Robot avoids obstacles on Arduino (C++ - Arduino)",
     "[On hold] Portfolio (C# - Blazor)"
   };
