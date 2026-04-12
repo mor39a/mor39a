@@ -46,7 +46,7 @@ public class Mora {
   <!--Monkeytype-Start-->
   | Mode        | WPM   | Accuracy | Raw WPM | Date        |
   |-------------|-------|----------|---------|-------------|
-  | 30s English | 70.79 | 100%     | 70.79   | 16 Aug 2025 |
+  | 30s Spanish | 70.83 | 99.44%   | 70.83   | 11 Apr 2026 |
   <!--Monkeytype-End-->
 
 </div>
