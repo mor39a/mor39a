@@ -6,7 +6,7 @@ on:
     workflow_dispatch:
 
 jobs:
-    update-age:
+    update-wpm:
         runs-on: ubuntu-latest
 
         permissions:
